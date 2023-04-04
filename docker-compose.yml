@@ -30,7 +30,7 @@ services:
     networks:
       - app-network
 
-  webserver:
+  bilgisayarmuhendisligi:
     depends_on:
       - wordpress
     image: nginx:1.15.12-alpine
@@ -47,7 +47,7 @@ services:
 
   certbot:
     depends_on:
-      - webserver
+      - bilgisayarmuhendisligi
     image: certbot/certbot
     container_name: certbot
     volumes:

@@ -52,6 +52,7 @@ services:
     container_name: certbot
     volumes:
       - certbot-etc:/etc/letsencrypt
+      - certbot-var:/var/lib/letsencrypt
       - wordpress:/var/www/html
     command: certonly --webroot --webroot-path=/var/www/html --email halit@halithatahet.live --agree-tos --no-eff-email --staging -d halithatahet.live
 
